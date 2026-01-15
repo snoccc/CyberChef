@@ -130,12 +130,14 @@ module.exports = function (grunt) {
                         compileYear: compileYear,
                         compileTime: compileTime,
                         version: pkg.version,
-                        minify: {
+                        minify: false,
+
+                        /* minify: {
                             removeComments: true,
                             collapseWhitespace: true,
                             minifyJS: true,
                             minifyCSS: true
-                        }
+                        } */
                     }),
                     new BundleAnalyzerPlugin({
                         analyzerMode: "static",

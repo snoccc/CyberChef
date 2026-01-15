@@ -931,6 +931,21 @@
             /* TODO: multiline input makes the container too big */
           }
         }
+
+        /* full screen the recipe on search*/
+        body:has(ul#search-results li) {
+          #IO {
+            display: none;  
+          }
+          /* optional:  put the recipe list on the bottom */
+          #workspace-wrapper {
+            grid-template-rows: 1fr auto;
+          }
+        }
+
+        .list-area {
+          position: static;
+        }
       }
     </style>
     </body>
