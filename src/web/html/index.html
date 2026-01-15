@@ -28,7 +28,7 @@
         <meta name="copyright" content="Crown Copyright 2016-<%= htmlWebpackPlugin.options.compileYear %>" />
         <meta name="description" content="The Cyber Swiss Army Knife - a web app for encryption, encoding, compression and data analysis" />
         <meta name="keywords" content="base64, hex, decode, encode, encrypt, decrypt, compress, decompress, regex, regular expressions, hash, crypt, hexadecimal, user agent, url, certificate, x.509, parser, JSON, gzip,  md5, sha1, aes, des, blowfish, xor" />
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/ico" href="<%- require('../static/images/favicon.ico') %>" />
 
         <script type="application/javascript">
@@ -905,5 +905,33 @@
             </div>
         </div>
 
+    <style>
+        /* Mobile view */
+      @media (max-width : 768px) {
+        #banner {display:none}
+        .gutter {display:none}
+        #controls {display:none}
+        
+        #workspace-wrapper {
+          top: 0;
+          display: grid;
+          grid-template-rows: auto auto 1fr;
+
+          & > * {
+            width: 100% !important;
+          }
+
+          #operations {
+            #categories {
+              display: none; /* hide the operations by default */
+            }
+          }
+
+          #input-text, #output-text {
+            /* TODO: multiline input makes the container too big */
+          }
+        }
+      }
+    </style>
     </body>
 </html>
