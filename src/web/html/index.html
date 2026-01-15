@@ -946,6 +946,24 @@
         .list-area {
           position: static;
         }
+
+        /* fix adding recipes (remove drag and fix double click) */
+        body:has(.operation:hover) .popover {
+          display: none;
+        }
+
+        .op-list {
+          max-height: 100%;
+          overflow-y: scroll;
+          scrollbar-width: none; /* TODO: support browsers */
+        }
+
+        /* limit recipe height */
+        #rec-list {
+          max-height: 25vh;
+          overflow-y: scroll;
+          scrollbar-width: none; /* TODO: support browsers */
+        }
       }
     </style>
     </body>
