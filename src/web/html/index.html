@@ -927,8 +927,9 @@
             }
           }
 
-          #input-text, #output-text {
-            /* TODO: multiline input makes the container too big */
+          /* limit IO height by allowing row to be smaller than its content */
+          #IO {
+            min-height: 0;
           }
         }
 
